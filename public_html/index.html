@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Immigration Data Visualization</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.15/d3.min.js" charset="utf-8" type="text/javascript"></script>
+        <script src="//d3js.org/topojson.v1.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="designs_style.css">
+    </head>
+    <body>
+        <!--    Header and Navigation   -->
+        <header>
+            <div class="container">
+                <h1 class="website-title"> Parth Bhatt</h1>
+                <h4 class="website-subtitle">#007</h4>
+                <nav>
+                    <ul>
+                        <li><a href="#linechart">Line Chart</a></li>
+                        <li><a href="#barchart">Bar Chart</a></li>
+                        <li><a href="#worldmap">World Choropleth</a></li>
+                        <li><a href="detail.html">Project Information</a></li>
+                    </ul>
+                </nav>
+                <h1 class="website-title"> Visualization on Immigration Dataset</h1>
+            </div>
+        </header>
+        <br />
+        <div class="clearfix">
+            <div class="container">
+                <div class="">
+                    <h2 class="content-title"> CIS 602/01 Data Visualization</h2>
+                    <div class="content-holder">
+                        <h4 class="content-subtitle"> Project</h4>
+                        <p class="content"> This project is all my own work <br /> I did not copy the code from any other source. <br/> References are mentioned at the end. </p>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="clearfix">
+                <div class="container">
+                    <div class="">
+                        <h2 class="content-title">Line Chart</h2>
+                        <div class="content-holder">
+                            <div id="linechart"></div>
+                            <div style=" margin-left: 50px;">
+                                <div id="cobn_line_dd" style = "float:left; width: 280px;"></div>
+                                <div id="cou_line_dd" style="margin: 0 auto; width: 150px; display: inline-block;"></div>
+                                <div id="variable_line_dd" style="width: 150px; display: inline; "></div>
+                                <div id="btn_line" style="width: 150px; display: inline; "> 
+                                    <input name="filterlinebtn" id="filterlinebtn" type="button" value="Filter"/>
+                                </div>
+                                <h2 class="content-title">Trends in various constraints among different countries from 2000 to 2013.</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="clearfix">
+                <div class="container">
+                    <div class="">
+                        <h2 class="content-title">Bar Chart</h2>
+                        <div class="content-holder">
+                            <div id="barchart"></div>
+                            <div style=" margin-left: 50px;">
+                                <div id="var_bar_dd" style="width: 150px; display: inline; "></div>
+                                <div id="year_dd" style="width: 150px; display: inline; "></div>
+                                <div id="btn_bar" style="width: 150px; display: inline; "> 
+                                    <input name="filter_bar" id="filter_bar" type="button" value="Filter"/>
+                                </div>
+                                <h2 class="content-title"> Top 20 countries according to above constraint of variable for particular year.</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="clearfix">
+                <div class="container">
+                    <div class="">
+                        <h2 class="content-title">World Choropleth</h2>
+                        <div class="content-holder">
+                            <div id="map"></div>
+                            <div style=" margin-left: 50px;">
+
+                            </div>
+                            <h2 class="content-title">
+                                World Choropleth according to particular year and variable.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="clearfix">
+                <div class="container">
+                    <div class="">
+                        <h2 class="content-title">References</h2>
+                        <div class="content-holder">
+                            <ol class="ref-list">
+                                <li>
+                                    <a target="_blank" href="http://stackoverflow.com/questions/24588883/populate-dropdown-list-with-csv-file-d3">Dropdown list</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://bl.ocks.org/mbostock/1389927">Bar chart example</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://github.com/mbostock/d3/wiki/Geo-Projections">Choropleth Map</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <br />
+        <script src="https://d3js.org/d3-queue.v2.min.js" type="text/javascript"></script>
+        <script src="designs_js.js"></script>
+    </body>
+</html>

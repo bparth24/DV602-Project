@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Immigration Data Visualization</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.15/d3.min.js" charset="utf-8" type="text/javascript"></script>
+        <script src="//d3js.org/topojson.v1.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="designs_style.css">
+    </head>
+    <body>
+        <!--    Header and Navigation   -->
+        <header>
+            <div class="container">
+                <h1 class="website-title"> Parth Bhatt</h1>
+                <h4 class="website-subtitle">#007</h4>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Line Chart</a></li>
+                        <li><a href="index.html">Bar Chart</a></li>
+                        <li><a href="index.html">World Choropleth</a></li>
+                        <li><a href="detail.html">Project Information</a></li>
+                    </ul>
+                </nav>
+                <h1 class="website-title"> Visualization on Immigration Dataset</h1>
+            </div>
+        </header>
+        <br />
+        <div class="clearfix">
+            <div class="container">
+                <div class="">
+                    <h2 class="content-title"> CIS 602/01 Data Visualization</h2>
+                    <div class="content-holder">
+                        <h4 class="content-subtitle"> Project</h4>
+                        <p class="content"> This project is all my own work <br /> I did not copy the code from any other source. <br/> References are mentioned at the end. </p>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="clearfix">
+                <div class="container">
+                    <div class="">
+                        <h2 class="content-title">Dataset details</h2>
+                        <div class="content-holder">
+                            <h2 class="content-title"><a href="http://www.oecd-ilibrary.org/social-issues-migration-health/data/oecd-international-migration-statistics_mig-data-en">International Migration Database</a></h2>
+                            <h2 class="content-title">The International Migration database presents data showcasing flows and stocks of the total immigrant population and immigrant labour force together with data on acquisition of nationality.</h2>
+                            <h2 class="content-title">I have the data from year 2000 to 2013.</h2>
+                            <h2 class="content-title">Types and semantics of dataset:</h2>
+                            <h2 class="content-title">
+                                <ol class="ref-list">
+                                    <li>Country of birth/nationality - Contains the name of the country in which one is born or having nationality. (Categorical)</li>
+                                    <li>Variable - Contains the factor by which migrations occur. (Categorical)
+                                        <br />
+                                        <ol class="ref-list">
+                                            <li>Inflows of foreign population by nationality</li>
+                                            <li>Outflows of foreign population by nationality</li>
+                                            <li>Stock of foreign-born population by country of birth</li>
+                                            <li>Inflows of asylum seekers by nationality</li>
+                                            <li>Stock of foreign population by nationality</li>
+                                            <li>Acquisition of nationality by country of former nationality</li>
+                                            <li>Inflows of foreign workers by nationality</li>
+                                            <li>Inflows of seasonal foreign workers by nationality</li>
+                                            <li>Stock of foreign born labour by country of birth</li>
+                                            <li>Stock of foreign labour by nationality</li>
+                                        </ol>
+                                    </li>
+                                    <li>Country - Contains the name of the country to migrate. (Categorical)</li>
+                                    <li>year - Contains migration year. (Ordered)</li>
+                                    <li>Value - Contains the number. (Quantitative)</li>
+                                </ol>
+                            </h2>
+                            <h2 class="content-title">
+                                Variable Details 
+                                <br />
+                                Acquisition of nationality
+                            </h2>
+
+                            <h4 class="content-title">
+                                <p class="content">Acquisition of citizenship refers to the mechanism by which certain foreign-born children acquire citizenship automatically by virtue of being born to parents who are U.S. citizens.</p>
+                            </h4>
+                            <h2>
+                                Foreign Population</h2>
+                            <h4 class="content-title">
+                                <p class="content">The foreign population consists of people who still have the nationality of their home country. It may include people born in the host country. The difference across countries between the size of the foreign-born population and that of the foreign population depends on the rules governing the acquisition of citizenship in each country. This indicator is measured as a percentage of population.</p>
+                            </h4>
+                            <h2>
+                                Foreign-born population
+                            </h2>
+                            <h4 class="content-title">
+                                <p class="content">The foreign-born population covers all people who have ever migrated from their country of birth to their current country of residence. The foreign-born population data shown here include people born abroad as nationals of their current country of residence. The difference across countries between the size of the foreign-born population and that of the foreign population depends on the rules governing the acquisition of citizenship in each country. This indicator is measured as a percentage of population.</p>
+                            </h4>
+                            <h2>
+
+                                Stocks of foreign-born population
+                            </h2>
+                            <h4 class="content-title">
+                                <p class="content">This indicator presents the stock of foreign-born population, that is, the size of immigrant populations as measured in number of persons. Data on immigrant populations may be collected through registers, residence permits, statistical surveys, or censuses, depending on the country.</p>
+                            </h4>
+                            <h2>
+                                Effects of immigration
+                            </h2>
+                            <h4 class="content-title">
+                                <p class="content">The effects of immigration on the total output and income of the U.S. economy can be studied by comparing output per worker and employment in states that have had large immigrant inflows with data from states that have few new foreign-born workers. Statistical analysis of state-level data shows that immigrants expand the economy’s productive capacity by stimulating investment and promoting specialization. This produces efficiency gains and boosts income per worker. At the same time, evidence is scant that immigrants diminish the employment opportunities of U.S.-born workers.</p>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="clearfix">
+                <div class="container">
+                    <div class="">
+                        <h2 class="content-title">References</h2>
+                        <div class="content-holder">
+                            <ol class="ref-list">
+                                <li>
+                                    <a target="_blank" href="http://stackoverflow.com/questions/24588883/populate-dropdown-list-with-csv-file-d3">Dropdown list</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://bl.ocks.org/mbostock/1389927">Bar chart example</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://github.com/mbostock/d3/wiki/Geo-Projections">Choropleth Map</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://www.oecd-ilibrary.org/social-issues-migration-health/international-migration-outlook-2015_migr_outlook-2015-en">International Migration Outlook 2015 - Details of each variable</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <br />
+    </body>
+</html>
